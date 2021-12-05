@@ -1,4 +1,3 @@
-@dd($universes)
 <x-space-layout>
     <x-slot name="content">
         <div class="">
