@@ -9,9 +9,8 @@ class UniverseController extends Controller
 {
     public function index()
     {
-        //@Joris | @Bob | @Thomas | @Ties
         $universes = Universe::with(['planets' => function($query) {
-            $query->orderBy('age', 'desc')->take(3);
+            $query->orderBy('age', 'desc');
         }])->get();
         return view('space.universes', ['universes' => $universes]);
     }
